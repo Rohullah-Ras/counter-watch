@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(to top right,#9AC5F4,20%,#99DBF5,30%, #A7ECEE,70%, #FFEEBB);
+    gap: 20PX;
+}
+
+.counter{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 5px -1px rgb(0, 0 , 0, 0.2 );
+    background: white;
+    border-radius: 10px;
+    animation-name: popup;
+    animation-duration: 0.4s;
+
+}
+
+.counter__top{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.counter__heading{
+    font-size: 800%;
+    font-weight: 600;
+}
+
+.counter__bottom{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.counter__button{
+    width: 150px;
+    height:50px ;
+    font-size: 180%;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter__button:focus{
+    outline: 2px solid blue;
+}
+
+.counter__button:hover{
+    cursor: pointer;
+}
+
+.counter__button--red{
+    background: #BF3131;
+}
+
+.counter__button--red:hover{
+    background: darkred;
+}
+
+.counter__button--green{
+    background: #219C90;
+}
+
+.counter__button--green:hover{
+    background: darkcyan;
+}
+
+@keyframes popup {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media  screen and (max-width:1000px){
+    body{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .counter{
+        height: 600px;
+        width: 100%;
+    }
+
+    .counter__bottom{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .counter__button{
+        width: 100%;
+    }
+}
